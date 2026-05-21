@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOONHUB</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Preload Images for faster loading -->
+  <link rel="preload"
+    href="https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/1.02464a56.png"
+    as="image">
+  <link rel="preload"
+    href="https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/2.b977faab.png"
+    as="image">
+  <link rel="preload"
+    href="https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/3.4df853b4.png"
+    as="image">
+  <link rel="preload"
+    href="https://fifth-gentle-45902158.figma.site/_components/v2/4de492f6d9cf8244ad5293233e5c6f52407d42fc/4.4457fbce.png"
+    as="image">
+  <link rel="preload" href="./toon_figure_5_1779358690465.png" as="image">
+  <link rel="preload" href="./toon_figure_6_1779358755613.png" as="image">
+  <link rel="preload" href="./toon_figure_7_1779358772795.png" as="image">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="margin-0 overflow-hidden">
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <div id="hero-wrapper" class="relative w-full h-screen overflow-hidden hero-bg">
+
+    <!-- Grain overlay -->
+    <div class="absolute inset-0 pointer-events-none z-50 opacity-40 grain-overlay"></div>
+
+    <!-- Giant ghost text -->
+    <div class="absolute inset-x-0 flex items-center justify-center pointer-events-none select-none z-[2] ghost-text">
+      3D SHAPE
+    </div>
+
+    <!-- Top-left brand label -->
+    <a href="#"
+      class="absolute top-6 left-4 sm:left-8 z-[60] flex items-center text-white opacity-90 hover:opacity-100 transition-opacity no-underline group pointer-events-auto">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 transform group-hover:rotate-12 transition-transform duration-300">
+        <!-- Isometric box / 3D shape -->
+        <path
+          d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+          stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+        <path d="M3.27 6.96L12 12.01l8.73-5.05" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+        <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+      </svg>
+      <span class="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mt-1">
+        TOONHUB
+      </span>
+    </a>
+
+    <!-- Carousel -->
+    <div id="carousel-container" class="absolute inset-0 z-[3] pointer-events-none">
+      <!-- Images injected via JS -->
+    </div>
+
+    <!-- Bottom-left text + nav buttons -->
+    <div class="absolute bottom-6 left-4 sm:bottom-20 sm:left-24 z-[60] max-w-[320px] pointer-events-auto">
+      <p class="font-bold uppercase tracking-[0.02em] mb-2 sm:mb-3 text-base sm:text-[22px] text-white opacity-95">
+        TOONHUB FIGURINES
+      </p>
+
+      <div class="flex gap-4">
+        <button id="btn-prev"
+          class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-transparent border-2 border-white flex items-center justify-center text-white hover:bg-white/12 transition-all duration-150 hover:scale-[1.08]"
+          aria-label="Previous">
+          <i data-lucide="arrow-left" class="w-[26px] h-[26px] stroke-[2.25px]"></i>
+        </button>
+        <button id="btn-next"
+          class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-transparent border-2 border-white flex items-center justify-center text-white hover:bg-white/12 transition-all duration-150 hover:scale-[1.08]"
+          aria-label="Next">
+          <i data-lucide="arrow-right" class="w-[26px] h-[26px] stroke-[2.25px]"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
