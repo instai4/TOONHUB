@@ -1,4 +1,4 @@
-<div align="center">
+
 
 ![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=160&section=header&text=TOONHUB&fontSize=48&fontColor=fff&animation=twinkling&fontAlignY=40)
 
